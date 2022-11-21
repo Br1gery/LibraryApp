@@ -32,6 +32,18 @@ namespace LibraryApp
             publisher_id_combo.DataSource = DB.DataBase.Publishers.ToList();
             publisher_id_combo.DisplayMember = "Publisher";
             publisher_id_combo.ValueMember = "id";
+
+            author_id_combo2.DataSource = DB.DataBase.Authors.ToList();
+            author_id_combo2.DisplayMember = "Author";
+            author_id_combo2.ValueMember = "id";
+
+            genre_id_combo2.DataSource = DB.DataBase.Genres.ToList();
+            genre_id_combo2.DisplayMember = "Genre";
+            genre_id_combo2.ValueMember = "id";
+
+            publisher_id_combo2.DataSource = DB.DataBase.Publishers.ToList();
+            publisher_id_combo2.DisplayMember = "Publisher";
+            publisher_id_combo2.ValueMember = "id";
         }
 
         private void Table_refresh()
@@ -54,6 +66,11 @@ namespace LibraryApp
             DB.DataBase.Add(book);
             DB.DataBase.SaveChanges();
             MessageBox.Show("Книга успешно добавлена");
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

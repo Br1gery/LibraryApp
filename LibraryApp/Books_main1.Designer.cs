@@ -33,13 +33,10 @@
             this.delete = new System.Windows.Forms.Button();
             this.id_text3 = new System.Windows.Forms.TextBox();
             this.change = new System.Windows.Forms.Button();
-            this.Publisher_id_text2 = new System.Windows.Forms.TextBox();
             this.Description_text2 = new System.Windows.Forms.TextBox();
-            this.Genre_id_text2 = new System.Windows.Forms.TextBox();
             this.Pages_text2 = new System.Windows.Forms.TextBox();
             this.Rel_year_text2 = new System.Windows.Forms.TextBox();
             this.Name_text2 = new System.Windows.Forms.TextBox();
-            this.Author_id_text2 = new System.Windows.Forms.TextBox();
             this.Id_text2 = new System.Windows.Forms.TextBox();
             this.add = new System.Windows.Forms.Button();
             this.Description_text = new System.Windows.Forms.TextBox();
@@ -75,6 +72,9 @@
             this.genreIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.publisherIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.author_id_combo2 = new System.Windows.Forms.ComboBox();
+            this.genre_id_combo2 = new System.Windows.Forms.ComboBox();
+            this.publisher_id_combo2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -123,14 +123,6 @@
             this.change.Text = "Изменить";
             this.change.UseVisualStyleBackColor = false;
             // 
-            // Publisher_id_text2
-            // 
-            this.Publisher_id_text2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Publisher_id_text2.Location = new System.Drawing.Point(1127, 378);
-            this.Publisher_id_text2.Name = "Publisher_id_text2";
-            this.Publisher_id_text2.Size = new System.Drawing.Size(100, 26);
-            this.Publisher_id_text2.TabIndex = 104;
-            // 
             // Description_text2
             // 
             this.Description_text2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -138,14 +130,6 @@
             this.Description_text2.Name = "Description_text2";
             this.Description_text2.Size = new System.Drawing.Size(100, 26);
             this.Description_text2.TabIndex = 103;
-            // 
-            // Genre_id_text2
-            // 
-            this.Genre_id_text2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Genre_id_text2.Location = new System.Drawing.Point(774, 378);
-            this.Genre_id_text2.Name = "Genre_id_text2";
-            this.Genre_id_text2.Size = new System.Drawing.Size(100, 26);
-            this.Genre_id_text2.TabIndex = 102;
             // 
             // Pages_text2
             // 
@@ -170,14 +154,6 @@
             this.Name_text2.Name = "Name_text2";
             this.Name_text2.Size = new System.Drawing.Size(100, 26);
             this.Name_text2.TabIndex = 99;
-            // 
-            // Author_id_text2
-            // 
-            this.Author_id_text2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Author_id_text2.Location = new System.Drawing.Point(838, 298);
-            this.Author_id_text2.Name = "Author_id_text2";
-            this.Author_id_text2.Size = new System.Drawing.Size(100, 26);
-            this.Author_id_text2.TabIndex = 98;
             // 
             // Id_text2
             // 
@@ -258,71 +234,71 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(948, 339);
+            this.label8.Location = new System.Drawing.Point(951, 339);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 24);
+            this.label8.Size = new System.Drawing.Size(100, 24);
             this.label8.TabIndex = 86;
-            this.label8.Text = "Description";
+            this.label8.Text = "Описание";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(779, 340);
+            this.label9.Location = new System.Drawing.Point(795, 339);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 24);
+            this.label9.Size = new System.Drawing.Size(58, 24);
             this.label9.TabIndex = 85;
-            this.label9.Text = "Genre_id";
+            this.label9.Text = "Жанр";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(1119, 339);
+            this.label10.Location = new System.Drawing.Point(1130, 339);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 24);
+            this.label10.Size = new System.Drawing.Size(97, 24);
             this.label10.TabIndex = 84;
-            this.label10.Text = "Publisher_id";
+            this.label10.Text = "Издатель";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(1177, 255);
+            this.label11.Location = new System.Drawing.Point(1156, 255);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 24);
+            this.label11.Size = new System.Drawing.Size(100, 24);
             this.label11.TabIndex = 83;
-            this.label11.Text = "Pages";
+            this.label11.Text = "Страницы";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(1056, 255);
+            this.label12.Location = new System.Drawing.Point(1039, 255);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(84, 24);
+            this.label12.Size = new System.Drawing.Size(124, 24);
             this.label12.TabIndex = 82;
-            this.label12.Text = "Rel_year";
+            this.label12.Text = "Год издания";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(963, 254);
+            this.label13.Location = new System.Drawing.Point(946, 255);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(61, 24);
+            this.label13.Size = new System.Drawing.Size(97, 24);
             this.label13.TabIndex = 81;
-            this.label13.Text = "Name";
+            this.label13.Text = "Название";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(844, 254);
+            this.label14.Location = new System.Drawing.Point(855, 254);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(91, 24);
+            this.label14.Size = new System.Drawing.Size(66, 24);
             this.label14.TabIndex = 80;
-            this.label14.Text = "Author_id";
+            this.label14.Text = "Автор";
             // 
             // label7
             // 
@@ -330,9 +306,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.Location = new System.Drawing.Point(1051, 89);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 24);
+            this.label7.Size = new System.Drawing.Size(97, 24);
             this.label7.TabIndex = 79;
-            this.label7.Text = "Publisher_id";
+            this.label7.Text = "Издатель";
             // 
             // label6
             // 
@@ -340,59 +316,60 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(841, 90);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 24);
+            this.label6.Size = new System.Drawing.Size(100, 24);
             this.label6.TabIndex = 78;
-            this.label6.Text = "Description";
+            this.label6.Text = "Описание";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(1161, 11);
+            this.label5.Location = new System.Drawing.Point(1177, 12);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 24);
+            this.label5.Size = new System.Drawing.Size(58, 24);
             this.label5.TabIndex = 77;
-            this.label5.Text = "Genre_id";
+            this.label5.Text = "Жанр";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(1070, 12);
+            this.label4.Location = new System.Drawing.Point(1052, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 24);
+            this.label4.Size = new System.Drawing.Size(100, 24);
             this.label4.TabIndex = 76;
-            this.label4.Text = "Pages";
+            this.label4.Text = "Страницы";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(951, 12);
+            this.label3.Location = new System.Drawing.Point(932, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 24);
+            this.label3.Size = new System.Drawing.Size(124, 24);
             this.label3.TabIndex = 75;
-            this.label3.Text = "Rel_year";
+            this.label3.Text = "Год издания";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(839, 12);
+            this.label2.Location = new System.Drawing.Point(853, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 24);
+            this.label2.Size = new System.Drawing.Size(66, 24);
             this.label2.TabIndex = 74;
-            this.label2.Text = "Author_id";
+            this.label2.Text = "Автор";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(751, 12);
+            this.label1.Location = new System.Drawing.Point(735, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 24);
+            this.label1.Size = new System.Drawing.Size(97, 24);
             this.label1.TabIndex = 73;
-            this.label1.Text = "Name";
+            this.label1.Text = "Название";
             // 
             // dataGridView1
             // 
@@ -491,25 +468,52 @@
             this.publisherIdDataGridViewTextBoxColumn.HeaderText = "PublisherId";
             this.publisherIdDataGridViewTextBoxColumn.Name = "publisherIdDataGridViewTextBoxColumn";
             // 
+            // author_id_combo2
+            // 
+            this.author_id_combo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.author_id_combo2.FormattingEnabled = true;
+            this.author_id_combo2.Location = new System.Drawing.Point(838, 298);
+            this.author_id_combo2.Name = "author_id_combo2";
+            this.author_id_combo2.Size = new System.Drawing.Size(100, 28);
+            this.author_id_combo2.TabIndex = 111;
+            // 
+            // genre_id_combo2
+            // 
+            this.genre_id_combo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.genre_id_combo2.FormattingEnabled = true;
+            this.genre_id_combo2.Location = new System.Drawing.Point(778, 379);
+            this.genre_id_combo2.Name = "genre_id_combo2";
+            this.genre_id_combo2.Size = new System.Drawing.Size(100, 28);
+            this.genre_id_combo2.TabIndex = 112;
+            // 
+            // publisher_id_combo2
+            // 
+            this.publisher_id_combo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.publisher_id_combo2.FormattingEnabled = true;
+            this.publisher_id_combo2.Location = new System.Drawing.Point(1127, 379);
+            this.publisher_id_combo2.Name = "publisher_id_combo2";
+            this.publisher_id_combo2.Size = new System.Drawing.Size(100, 28);
+            this.publisher_id_combo2.TabIndex = 113;
+            // 
             // Books_main1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.publisher_id_combo2);
+            this.Controls.Add(this.genre_id_combo2);
+            this.Controls.Add(this.author_id_combo2);
             this.Controls.Add(this.publisher_id_combo);
             this.Controls.Add(this.genre_id_combo);
             this.Controls.Add(this.author_id_combo);
             this.Controls.Add(this.delete);
             this.Controls.Add(this.id_text3);
             this.Controls.Add(this.change);
-            this.Controls.Add(this.Publisher_id_text2);
             this.Controls.Add(this.Description_text2);
-            this.Controls.Add(this.Genre_id_text2);
             this.Controls.Add(this.Pages_text2);
             this.Controls.Add(this.Rel_year_text2);
             this.Controls.Add(this.Name_text2);
-            this.Controls.Add(this.Author_id_text2);
             this.Controls.Add(this.Id_text2);
             this.Controls.Add(this.add);
             this.Controls.Add(this.Description_text);
@@ -549,13 +553,10 @@
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.TextBox id_text3;
         private System.Windows.Forms.Button change;
-        private System.Windows.Forms.TextBox Publisher_id_text2;
         private System.Windows.Forms.TextBox Description_text2;
-        private System.Windows.Forms.TextBox Genre_id_text2;
         private System.Windows.Forms.TextBox Pages_text2;
         private System.Windows.Forms.TextBox Rel_year_text2;
         private System.Windows.Forms.TextBox Name_text2;
-        private System.Windows.Forms.TextBox Author_id_text2;
         private System.Windows.Forms.TextBox Id_text2;
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.TextBox Description_text;
@@ -591,5 +592,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn publisherIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.ComboBox author_id_combo2;
+        private System.Windows.Forms.ComboBox genre_id_combo2;
+        private System.Windows.Forms.ComboBox publisher_id_combo2;
     }
 }

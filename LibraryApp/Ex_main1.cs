@@ -16,5 +16,25 @@ namespace LibraryApp
         {
             InitializeComponent();
         }
+
+        private void Ex_main1_Load(object sender, EventArgs e)
+        {
+            loc_combo.DataSource = DB.DataBase.Locations.ToList();
+            loc_combo.DisplayMember = "Location";
+            loc_combo.ValueMember = "id";
+
+            book_combo.DataSource = DB.DataBase.Books.ToList();
+            book_combo.DisplayMember = "Name";
+            book_combo.ValueMember = "id";
+
+            loc__combo2.DataSource = DB.DataBase.Locations.ToList();
+            loc__combo2.DisplayMember = "Location";
+            loc__combo2.ValueMember = "id";
+
+            book_combo2.DataSource = DB.DataBase.Books.ToList();
+            book_combo2.DisplayMember = "Name";
+            book_combo2.ValueMember = "id";
+
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -35,10 +36,8 @@
             this.id_text2 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.Reg_date_text2 = new System.Windows.Forms.TextBox();
-            this.Gender_id_text2 = new System.Windows.Forms.TextBox();
             this.Date_of_birth_text2 = new System.Windows.Forms.TextBox();
             this.Address_text2 = new System.Windows.Forms.TextBox();
-            this.Group_id_text2 = new System.Windows.Forms.TextBox();
             this.Lastname_text2 = new System.Windows.Forms.TextBox();
             this.Surname_text2 = new System.Windows.Forms.TextBox();
             this.Name_text2 = new System.Windows.Forms.TextBox();
@@ -52,10 +51,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.add = new System.Windows.Forms.Button();
             this.Reg_date_text = new System.Windows.Forms.TextBox();
-            this.Gender_id_text = new System.Windows.Forms.TextBox();
             this.Date_of_birth_text = new System.Windows.Forms.TextBox();
             this.Address_text = new System.Windows.Forms.TextBox();
-            this.Group_id_text = new System.Windows.Forms.TextBox();
             this.Lastname_text = new System.Windows.Forms.TextBox();
             this.Surname_text = new System.Windows.Forms.TextBox();
             this.Name_text = new System.Windows.Forms.TextBox();
@@ -68,7 +65,22 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.regDateDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.group_combo = new System.Windows.Forms.ComboBox();
+            this.gender_combo = new System.Windows.Forms.ComboBox();
+            this.group_combo2 = new System.Windows.Forms.ComboBox();
+            this.gender_combo2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -102,6 +114,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(953, 516);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(100, 26);
             this.textBox1.TabIndex = 144;
             // 
@@ -120,6 +133,7 @@
             this.id_text2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.id_text2.Location = new System.Drawing.Point(732, 285);
             this.id_text2.Name = "id_text2";
+            this.id_text2.ReadOnly = true;
             this.id_text2.Size = new System.Drawing.Size(100, 26);
             this.id_text2.TabIndex = 142;
             // 
@@ -141,14 +155,6 @@
             this.Reg_date_text2.Size = new System.Drawing.Size(100, 26);
             this.Reg_date_text2.TabIndex = 140;
             // 
-            // Gender_id_text2
-            // 
-            this.Gender_id_text2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Gender_id_text2.Location = new System.Drawing.Point(1011, 371);
-            this.Gender_id_text2.Name = "Gender_id_text2";
-            this.Gender_id_text2.Size = new System.Drawing.Size(100, 26);
-            this.Gender_id_text2.TabIndex = 139;
-            // 
             // Date_of_birth_text2
             // 
             this.Date_of_birth_text2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -164,14 +170,6 @@
             this.Address_text2.Name = "Address_text2";
             this.Address_text2.Size = new System.Drawing.Size(100, 26);
             this.Address_text2.TabIndex = 137;
-            // 
-            // Group_id_text2
-            // 
-            this.Group_id_text2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Group_id_text2.Location = new System.Drawing.Point(1155, 285);
-            this.Group_id_text2.Name = "Group_id_text2";
-            this.Group_id_text2.Size = new System.Drawing.Size(100, 26);
-            this.Group_id_text2.TabIndex = 136;
             // 
             // Lastname_text2
             // 
@@ -203,39 +201,39 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(859, 241);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 24);
+            this.label1.Size = new System.Drawing.Size(46, 24);
             this.label1.TabIndex = 132;
-            this.label1.Text = "Name";
+            this.label1.Text = "Имя";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(1012, 332);
+            this.label2.Location = new System.Drawing.Point(1037, 332);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 24);
+            this.label2.Size = new System.Drawing.Size(44, 24);
             this.label2.TabIndex = 131;
-            this.label2.Text = "Gender_id";
+            this.label2.Text = "Пол";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(873, 332);
+            this.label3.Location = new System.Drawing.Point(860, 332);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 24);
+            this.label3.Size = new System.Drawing.Size(150, 24);
             this.label3.TabIndex = 130;
-            this.label3.Text = "Date_of_birth";
+            this.label3.Text = "Дата рождения";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(1143, 332);
+            this.label4.Location = new System.Drawing.Point(1137, 332);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 24);
+            this.label4.Size = new System.Drawing.Size(94, 24);
             this.label4.TabIndex = 129;
-            this.label4.Text = "Reg_date";
+            this.label4.Text = "Рег. дата";
             // 
             // label5
             // 
@@ -243,9 +241,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(761, 332);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 24);
+            this.label5.Size = new System.Drawing.Size(77, 24);
             this.label5.TabIndex = 128;
-            this.label5.Text = "Address";
+            this.label5.Text = "Адресс";
             // 
             // label6
             // 
@@ -253,9 +251,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(1161, 242);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 24);
+            this.label6.Size = new System.Drawing.Size(73, 24);
             this.label6.TabIndex = 127;
-            this.label6.Text = "Group_id";
+            this.label6.Text = "Группа";
             // 
             // label7
             // 
@@ -263,9 +261,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.Location = new System.Drawing.Point(1054, 241);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 24);
+            this.label7.Size = new System.Drawing.Size(98, 24);
             this.label7.TabIndex = 126;
-            this.label7.Text = "Lastname";
+            this.label7.Text = "Отчество";
             // 
             // label16
             // 
@@ -273,9 +271,9 @@
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label16.Location = new System.Drawing.Point(949, 241);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(87, 24);
+            this.label16.Size = new System.Drawing.Size(91, 24);
             this.label16.TabIndex = 125;
-            this.label16.Text = "Surname";
+            this.label16.Text = "Фамилия";
             // 
             // add
             // 
@@ -298,14 +296,6 @@
             this.Reg_date_text.Size = new System.Drawing.Size(100, 26);
             this.Reg_date_text.TabIndex = 123;
             // 
-            // Gender_id_text
-            // 
-            this.Gender_id_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Gender_id_text.Location = new System.Drawing.Point(951, 136);
-            this.Gender_id_text.Name = "Gender_id_text";
-            this.Gender_id_text.Size = new System.Drawing.Size(100, 26);
-            this.Gender_id_text.TabIndex = 122;
-            // 
             // Date_of_birth_text
             // 
             this.Date_of_birth_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -321,14 +311,6 @@
             this.Address_text.Name = "Address_text";
             this.Address_text.Size = new System.Drawing.Size(100, 26);
             this.Address_text.TabIndex = 120;
-            // 
-            // Group_id_text
-            // 
-            this.Group_id_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Group_id_text.Location = new System.Drawing.Point(1050, 55);
-            this.Group_id_text.Name = "Group_id_text";
-            this.Group_id_text.Size = new System.Drawing.Size(100, 26);
-            this.Group_id_text.TabIndex = 119;
             // 
             // Lastname_text
             // 
@@ -358,41 +340,41 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(754, 11);
+            this.label15.Location = new System.Drawing.Point(761, 11);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(61, 24);
+            this.label15.Size = new System.Drawing.Size(46, 24);
             this.label15.TabIndex = 115;
-            this.label15.Text = "Name";
+            this.label15.Text = "Имя";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(952, 97);
+            this.label8.Location = new System.Drawing.Point(977, 99);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 24);
+            this.label8.Size = new System.Drawing.Size(44, 24);
             this.label8.TabIndex = 114;
-            this.label8.Text = "Gender_id";
+            this.label8.Text = "Пол";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(764, 97);
+            this.label9.Location = new System.Drawing.Point(752, 99);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(119, 24);
+            this.label9.Size = new System.Drawing.Size(150, 24);
             this.label9.TabIndex = 113;
-            this.label9.Text = "Date_of_birth";
+            this.label9.Text = "Дата рождения";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(1132, 97);
+            this.label10.Location = new System.Drawing.Point(1130, 99);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 24);
+            this.label10.Size = new System.Drawing.Size(94, 24);
             this.label10.TabIndex = 112;
-            this.label10.Text = "Reg_date";
+            this.label10.Text = "Рег. дата";
             // 
             // label11
             // 
@@ -400,47 +382,154 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label11.Location = new System.Drawing.Point(1168, 12);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 24);
+            this.label11.Size = new System.Drawing.Size(77, 24);
             this.label11.TabIndex = 111;
-            this.label11.Text = "Address";
+            this.label11.Text = "Адресс";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(1056, 12);
+            this.label12.Location = new System.Drawing.Point(1063, 12);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 24);
+            this.label12.Size = new System.Drawing.Size(73, 24);
             this.label12.TabIndex = 110;
-            this.label12.Text = "Group_id";
+            this.label12.Text = "Группа";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(949, 11);
+            this.label13.Location = new System.Drawing.Point(943, 12);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(91, 24);
+            this.label13.Size = new System.Drawing.Size(98, 24);
             this.label13.TabIndex = 109;
-            this.label13.Text = "Lastname";
+            this.label13.Text = "Отчество";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(844, 11);
+            this.label14.Location = new System.Drawing.Point(842, 12);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(87, 24);
+            this.label14.Size = new System.Drawing.Size(91, 24);
             this.label14.TabIndex = 108;
-            this.label14.Text = "Surname";
+            this.label14.Text = "Фамилия";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.surnameDataGridViewTextBoxColumn,
+            this.lastnameDataGridViewTextBoxColumn,
+            this.groupIdDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn,
+            this.dateOfBirthDataGridViewTextBoxColumn,
+            this.genderIdDataGridViewTextBoxColumn,
+            this.regDateDataGridViewImageColumn});
+            this.dataGridView1.DataSource = this.studentsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(9, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(720, 657);
             this.dataGridView1.TabIndex = 107;
+            // 
+            // studentsBindingSource
+            // 
+            this.studentsBindingSource.DataSource = typeof(LibraryApp.Students);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // surnameDataGridViewTextBoxColumn
+            // 
+            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
+            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            // 
+            // lastnameDataGridViewTextBoxColumn
+            // 
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "Lastname";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "Lastname";
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            // 
+            // groupIdDataGridViewTextBoxColumn
+            // 
+            this.groupIdDataGridViewTextBoxColumn.DataPropertyName = "GroupId";
+            this.groupIdDataGridViewTextBoxColumn.HeaderText = "GroupId";
+            this.groupIdDataGridViewTextBoxColumn.Name = "groupIdDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // dateOfBirthDataGridViewTextBoxColumn
+            // 
+            this.dateOfBirthDataGridViewTextBoxColumn.DataPropertyName = "DateOfBirth";
+            this.dateOfBirthDataGridViewTextBoxColumn.HeaderText = "DateOfBirth";
+            this.dateOfBirthDataGridViewTextBoxColumn.Name = "dateOfBirthDataGridViewTextBoxColumn";
+            // 
+            // genderIdDataGridViewTextBoxColumn
+            // 
+            this.genderIdDataGridViewTextBoxColumn.DataPropertyName = "GenderId";
+            this.genderIdDataGridViewTextBoxColumn.HeaderText = "GenderId";
+            this.genderIdDataGridViewTextBoxColumn.Name = "genderIdDataGridViewTextBoxColumn";
+            // 
+            // regDateDataGridViewImageColumn
+            // 
+            this.regDateDataGridViewImageColumn.DataPropertyName = "RegDate";
+            this.regDateDataGridViewImageColumn.HeaderText = "RegDate";
+            this.regDateDataGridViewImageColumn.Name = "regDateDataGridViewImageColumn";
+            // 
+            // group_combo
+            // 
+            this.group_combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.group_combo.FormattingEnabled = true;
+            this.group_combo.Location = new System.Drawing.Point(1050, 55);
+            this.group_combo.Name = "group_combo";
+            this.group_combo.Size = new System.Drawing.Size(100, 28);
+            this.group_combo.TabIndex = 147;
+            // 
+            // gender_combo
+            // 
+            this.gender_combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gender_combo.FormattingEnabled = true;
+            this.gender_combo.Location = new System.Drawing.Point(947, 135);
+            this.gender_combo.Name = "gender_combo";
+            this.gender_combo.Size = new System.Drawing.Size(100, 28);
+            this.gender_combo.TabIndex = 148;
+            // 
+            // group_combo2
+            // 
+            this.group_combo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.group_combo2.FormattingEnabled = true;
+            this.group_combo2.Location = new System.Drawing.Point(1152, 285);
+            this.group_combo2.Name = "group_combo2";
+            this.group_combo2.Size = new System.Drawing.Size(100, 28);
+            this.group_combo2.TabIndex = 149;
+            // 
+            // gender_combo2
+            // 
+            this.gender_combo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gender_combo2.FormattingEnabled = true;
+            this.gender_combo2.Location = new System.Drawing.Point(1011, 370);
+            this.gender_combo2.Name = "gender_combo2";
+            this.gender_combo2.Size = new System.Drawing.Size(100, 28);
+            this.gender_combo2.TabIndex = 150;
             // 
             // Students_main1
             // 
@@ -448,6 +537,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.gender_combo2);
+            this.Controls.Add(this.group_combo2);
+            this.Controls.Add(this.gender_combo);
+            this.Controls.Add(this.group_combo);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -455,10 +548,8 @@
             this.Controls.Add(this.id_text2);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.Reg_date_text2);
-            this.Controls.Add(this.Gender_id_text2);
             this.Controls.Add(this.Date_of_birth_text2);
             this.Controls.Add(this.Address_text2);
-            this.Controls.Add(this.Group_id_text2);
             this.Controls.Add(this.Lastname_text2);
             this.Controls.Add(this.Surname_text2);
             this.Controls.Add(this.Name_text2);
@@ -472,10 +563,8 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.add);
             this.Controls.Add(this.Reg_date_text);
-            this.Controls.Add(this.Gender_id_text);
             this.Controls.Add(this.Date_of_birth_text);
             this.Controls.Add(this.Address_text);
-            this.Controls.Add(this.Group_id_text);
             this.Controls.Add(this.Lastname_text);
             this.Controls.Add(this.Surname_text);
             this.Controls.Add(this.Name_text);
@@ -490,7 +579,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Students_main1";
             this.Text = "Students_main1";
+            this.Load += new System.EventHandler(this.Students_main1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -505,10 +596,8 @@
         private System.Windows.Forms.TextBox id_text2;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox Reg_date_text2;
-        private System.Windows.Forms.TextBox Gender_id_text2;
         private System.Windows.Forms.TextBox Date_of_birth_text2;
         private System.Windows.Forms.TextBox Address_text2;
-        private System.Windows.Forms.TextBox Group_id_text2;
         private System.Windows.Forms.TextBox Lastname_text2;
         private System.Windows.Forms.TextBox Surname_text2;
         private System.Windows.Forms.TextBox Name_text2;
@@ -522,10 +611,8 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.TextBox Reg_date_text;
-        private System.Windows.Forms.TextBox Gender_id_text;
         private System.Windows.Forms.TextBox Date_of_birth_text;
         private System.Windows.Forms.TextBox Address_text;
-        private System.Windows.Forms.TextBox Group_id_text;
         private System.Windows.Forms.TextBox Lastname_text;
         private System.Windows.Forms.TextBox Surname_text;
         private System.Windows.Forms.TextBox Name_text;
@@ -538,5 +625,19 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn groupIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateOfBirthDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn regDateDataGridViewImageColumn;
+        private System.Windows.Forms.BindingSource studentsBindingSource;
+        private System.Windows.Forms.ComboBox group_combo;
+        private System.Windows.Forms.ComboBox gender_combo;
+        private System.Windows.Forms.ComboBox group_combo2;
+        private System.Windows.Forms.ComboBox gender_combo2;
     }
 }

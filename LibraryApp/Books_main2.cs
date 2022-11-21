@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore;
 
 namespace LibraryApp
 {
@@ -15,6 +16,12 @@ namespace LibraryApp
         public Books_main2()
         {
             InitializeComponent();
+        }
+
+        private void Books_main2_Load(object sender, EventArgs e)
+        {
+            DB.DataBase.Books.Load();
+            dataGridView1.DataSource = DB.DataBase.Books.Local.ToBindingList();
         }
     }
 }
