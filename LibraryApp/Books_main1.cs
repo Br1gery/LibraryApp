@@ -65,7 +65,7 @@ namespace LibraryApp
             book.AuthorId = Convert.ToInt32(author_id_combo.SelectedValue.ToString());
             book.GenreId = Convert.ToInt32(genre_id_combo.SelectedValue.ToString());
             book.PublisherId = Convert.ToInt32(publisher_id_combo.SelectedValue.ToString());
-            DB.DataBase.Add(book);
+            DB.DataBase.Books.Add(book);
             DB.DataBase.SaveChanges();
             MessageBox.Show("Книга успешно добавлена");
         }
@@ -85,8 +85,8 @@ namespace LibraryApp
             book.AuthorId = Convert.ToInt32(author_id_combo2.SelectedValue.ToString());
             book.GenreId = Convert.ToInt32(genre_id_combo2.SelectedValue.ToString());
             book.PublisherId = Convert.ToInt32(publisher_id_combo2.SelectedValue.ToString());
-            DB.DataBase.Update(book);
             DB.DataBase.SaveChanges();
+            dataGridView1.Refresh();
         }
 
         private void delete_Click(object sender, EventArgs e)
