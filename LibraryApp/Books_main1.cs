@@ -77,12 +77,21 @@ namespace LibraryApp
 
         private void change_Click(object sender, EventArgs e)
         {
-            
+            Books book = DB.DataBase.Books.FirstOrDefault(b => b.Id == Convert.ToInt32(Id_text2.Text));
+            book.Name = Name_text2.Text;
+            book.RelYear = Convert.ToInt32(Rel_year_text2.Text);
+            book.Pages = Convert.ToInt32(Pages_text2.Text);
+            book.Description = Description_text2.Text;
+            book.AuthorId = Convert.ToInt32(author_id_combo2.SelectedValue.ToString());
+            book.GenreId = Convert.ToInt32(genre_id_combo2.SelectedValue.ToString());
+            book.PublisherId = Convert.ToInt32(publisher_id_combo2.SelectedValue.ToString());
+            DB.DataBase.Update(book);
+            DB.DataBase.SaveChanges();
         }
 
         private void delete_Click(object sender, EventArgs e)
         {
-            Books book = DB.DataBase.Books.FirstOrDefault(b => b.Id == 1);
+            Books book = DB.DataBase.Books.FirstOrDefault(b => b.Id == Convert.ToInt32(id_text3.Text));
             if (book!=null)
             {
                 DB.DataBase.Books.Remove(book);
