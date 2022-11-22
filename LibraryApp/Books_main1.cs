@@ -49,6 +49,9 @@ namespace LibraryApp
         private void Table_refresh()
         {
             DB.DataBase.Books.Load();
+            DB.DataBase.Books.Include(t => t.Author).Load();
+            DB.DataBase.Books.Include(t => t.Genre).Load();
+            DB.DataBase.Books.Include(t => t.Publisher).Load();
             dataGridView1.DataSource = DB.DataBase.Books.Local.ToBindingList();
         }
 

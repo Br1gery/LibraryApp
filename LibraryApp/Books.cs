@@ -24,8 +24,29 @@ namespace LibraryApp
         public long? PublisherId { get; set; }
 
         public virtual Authors Author { get; set; }
+        public virtual string Author_name
+        {
+            get
+            {
+                return Author.Author;
+            }
+        }
         public virtual Genres Genre { get; set; }
+        public virtual string Genre_name
+        {
+            get
+            {
+                return Genre.Genre;
+            }
+        }
         public virtual Publishers Publisher { get; set; }
+        public virtual string Publisher_name
+        {
+            get
+            {
+                return Publisher.Publisher;
+            }
+        }
         public virtual ICollection<Examples> Examples { get; set; }
     }
 }
