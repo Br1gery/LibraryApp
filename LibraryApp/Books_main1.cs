@@ -58,7 +58,6 @@ namespace LibraryApp
         private void add_Click(object sender, EventArgs e)
         {
             Books book = new Books();
-            Authors authors = new Authors();
             book.Name = Name_text.Text;
             book.RelYear = Convert.ToInt32(Rel_year_text.Text);
             book.Pages = Convert.ToInt32(Pages_text.Text);
@@ -74,6 +73,21 @@ namespace LibraryApp
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void change_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            Books book = DB.DataBase.Books.FirstOrDefault(b => b.Id == 1);
+            if (book!=null)
+            {
+                DB.DataBase.Books.Remove(book);
+            }
+            DB.DataBase.SaveChanges();
         }
     }
 }

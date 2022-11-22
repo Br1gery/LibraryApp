@@ -60,10 +60,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.genre_id_combo = new System.Windows.Forms.ComboBox();
-            this.publisher_id_combo = new System.Windows.Forms.ComboBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,6 +68,10 @@
             this.genreIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.publisherIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.genre_id_combo = new System.Windows.Forms.ComboBox();
+            this.publisher_id_combo = new System.Windows.Forms.ComboBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.author_id_combo2 = new System.Windows.Forms.ComboBox();
             this.genre_id_combo2 = new System.Windows.Forms.ComboBox();
             this.publisher_id_combo2 = new System.Windows.Forms.ComboBox();
@@ -100,6 +100,7 @@
             this.delete.TabIndex = 107;
             this.delete.Text = "Удалить";
             this.delete.UseVisualStyleBackColor = false;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // id_text3
             // 
@@ -122,6 +123,7 @@
             this.change.TabIndex = 105;
             this.change.Text = "Изменить";
             this.change.UseVisualStyleBackColor = false;
+            this.change.Click += new System.EventHandler(this.change_Click);
             // 
             // Description_text2
             // 
@@ -391,35 +393,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(717, 657);
             this.dataGridView1.TabIndex = 72;
             // 
-            // genre_id_combo
-            // 
-            this.genre_id_combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.genre_id_combo.FormattingEnabled = true;
-            this.genre_id_combo.Location = new System.Drawing.Point(1156, 53);
-            this.genre_id_combo.Name = "genre_id_combo";
-            this.genre_id_combo.Size = new System.Drawing.Size(100, 28);
-            this.genre_id_combo.TabIndex = 109;
-            // 
-            // publisher_id_combo
-            // 
-            this.publisher_id_combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.publisher_id_combo.FormattingEnabled = true;
-            this.publisher_id_combo.Location = new System.Drawing.Point(1050, 132);
-            this.publisher_id_combo.Name = "publisher_id_combo";
-            this.publisher_id_combo.Size = new System.Drawing.Size(100, 28);
-            this.publisher_id_combo.TabIndex = 110;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Author";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Author";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 674;
-            // 
-            // booksBindingSource
-            // 
-            this.booksBindingSource.DataSource = typeof(LibraryApp.Books);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -467,6 +440,35 @@
             this.publisherIdDataGridViewTextBoxColumn.DataPropertyName = "PublisherId";
             this.publisherIdDataGridViewTextBoxColumn.HeaderText = "PublisherId";
             this.publisherIdDataGridViewTextBoxColumn.Name = "publisherIdDataGridViewTextBoxColumn";
+            // 
+            // booksBindingSource
+            // 
+            this.booksBindingSource.DataSource = typeof(LibraryApp.Books);
+            // 
+            // genre_id_combo
+            // 
+            this.genre_id_combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.genre_id_combo.FormattingEnabled = true;
+            this.genre_id_combo.Location = new System.Drawing.Point(1156, 53);
+            this.genre_id_combo.Name = "genre_id_combo";
+            this.genre_id_combo.Size = new System.Drawing.Size(100, 28);
+            this.genre_id_combo.TabIndex = 109;
+            // 
+            // publisher_id_combo
+            // 
+            this.publisher_id_combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.publisher_id_combo.FormattingEnabled = true;
+            this.publisher_id_combo.Location = new System.Drawing.Point(1050, 132);
+            this.publisher_id_combo.Name = "publisher_id_combo";
+            this.publisher_id_combo.Size = new System.Drawing.Size(100, 28);
+            this.publisher_id_combo.TabIndex = 110;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Author";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Author";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 674;
             // 
             // author_id_combo2
             // 
