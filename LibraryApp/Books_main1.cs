@@ -107,9 +107,9 @@ namespace LibraryApp
             ID1 = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             Id_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             Name_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            Rel_year_text2.Text= dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            Pages_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            Description_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            Rel_year_text2.Text= dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            Pages_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            Description_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             id_text3.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
         }
     }

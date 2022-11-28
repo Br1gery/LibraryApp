@@ -49,5 +49,23 @@ namespace LibraryApp
             Students_main1 students_Main1 = new Students_main1();
             students_Main1.Show();
         }
+
+        private void authors_main1_Click(object sender, EventArgs e)
+        {
+            Authors_main1 authors_Main1 = new Authors_main1();
+            authors_Main1.Show();
+        }
+
+        private void genres_main1_Click(object sender, EventArgs e)
+        {
+            Genres_main1 genres_Main1 = new Genres_main1();
+            genres_Main1.Show();
+        }
+
+        private void publishers_main1_Click(object sender, EventArgs e)
+        {
+            Publishers_main1 publishers_Main1 = new Publishers_main1();
+            publishers_Main1.Show();
+        }
     }
 }

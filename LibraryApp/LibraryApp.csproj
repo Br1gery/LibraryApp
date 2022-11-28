@@ -162,6 +162,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authors.cs" />
+    <Compile Include="Authors_main1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authors_main1.Designer.cs">
+      <DependentUpon>Authors_main1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Books.cs" />
     <Compile Include="Books_main1.cs">
       <SubType>Form</SubType>
@@ -197,6 +203,12 @@
     </Compile>
     <Compile Include="Genders.cs" />
     <Compile Include="Genres.cs" />
+    <Compile Include="Genres_main1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genres_main1.Designer.cs">
+      <DependentUpon>Genres_main1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Groups.cs" />
     <Compile Include="LibraryDBContext.cs" />
     <Compile Include="Locations.cs" />
@@ -215,6 +227,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Publishers.cs" />
+    <Compile Include="Publishers_main1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Publishers_main1.Designer.cs">
+      <DependentUpon>Publishers_main1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Students.cs" />
     <Compile Include="Students_main1.cs">
       <SubType>Form</SubType>
@@ -223,6 +241,9 @@
       <DependentUpon>Students_main1.cs</DependentUpon>
     </Compile>
     <Compile Include="UsersData.cs" />
+    <EmbeddedResource Include="Authors_main1.resx">
+      <DependentUpon>Authors_main1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Books_main1.resx">
       <DependentUpon>Books_main1.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genres_main1.resx">
+      <DependentUpon>Genres_main1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main1.resx">
       <DependentUpon>Main1.cs</DependentUpon>
@@ -253,6 +277,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Publishers_main1.resx">
+      <DependentUpon>Publishers_main1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Students_main1.resx">
       <DependentUpon>Students_main1.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,6 +287,7 @@
     <None Include="Properties\DataSources\Authors.datasource" />
     <None Include="Properties\DataSources\Books.datasource" />
     <None Include="Properties\DataSources\Examples.datasource" />
+    <None Include="Properties\DataSources\Publishers.datasource" />
     <None Include="Properties\DataSources\Students.datasource" />
     <None Include="Properties\DataSources\UsersData.datasource" />
     <None Include="Properties\Settings.settings">
