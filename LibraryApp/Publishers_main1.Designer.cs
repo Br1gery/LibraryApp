@@ -74,9 +74,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(470, 510);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 24);
+            this.label1.Size = new System.Drawing.Size(97, 24);
             this.label1.TabIndex = 107;
-            this.label1.Text = "Автор";
+            this.label1.Text = "Издатель";
             // 
             // label2
             // 
@@ -84,9 +84,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(66, 487);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 24);
+            this.label2.Size = new System.Drawing.Size(97, 24);
             this.label2.TabIndex = 106;
-            this.label2.Text = "Автор";
+            this.label2.Text = "Издатель";
             // 
             // id_text3
             // 
@@ -134,6 +134,7 @@
             this.Delete.TabIndex = 101;
             this.Delete.Text = "Удалить";
             this.Delete.UseVisualStyleBackColor = false;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // Change
             // 
@@ -147,6 +148,7 @@
             this.Change.TabIndex = 100;
             this.Change.Text = "Изменить";
             this.Change.UseVisualStyleBackColor = false;
+            this.Change.Click += new System.EventHandler(this.Change_Click);
             // 
             // Add
             // 
@@ -160,6 +162,7 @@
             this.Add.TabIndex = 99;
             this.Add.Text = "Добавить";
             this.Add.UseVisualStyleBackColor = false;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // dataGridView1
             // 
@@ -174,6 +177,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(679, 295);
             this.dataGridView1.TabIndex = 98;
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // publishersBindingSource
             // 
@@ -211,6 +215,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Publishers_main1";
             this.Text = "Publishers_main1";
+            this.Load += new System.EventHandler(this.Publishers_main1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.publishersBindingSource)).EndInit();
             this.ResumeLayout(false);

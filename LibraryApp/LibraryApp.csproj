@@ -287,6 +287,7 @@
     <None Include="Properties\DataSources\Authors.datasource" />
     <None Include="Properties\DataSources\Books.datasource" />
     <None Include="Properties\DataSources\Examples.datasource" />
+    <None Include="Properties\DataSources\Genres.datasource" />
     <None Include="Properties\DataSources\Publishers.datasource" />
     <None Include="Properties\DataSources\Students.datasource" />
     <None Include="Properties\DataSources\UsersData.datasource" />

@@ -21,6 +21,9 @@ namespace LibraryApp
         private void Books_main2_Load(object sender, EventArgs e)
         {
             DB.DataBase.Books.Load();
+            DB.DataBase.Books.Include(t => t.Author).Load();
+            DB.DataBase.Books.Include(t => t.Genre).Load();
+            DB.DataBase.Books.Include(t => t.Publisher).Load();
             dataGridView1.DataSource = DB.DataBase.Books.Local.ToBindingList();
         }
     }

@@ -22,7 +22,7 @@ namespace LibraryApp
         public string Address { get; set; }
         public string DateOfBirth { get; set; }
         public long? GenderId { get; set; }
-        public byte[] RegDate { get; set; }
+        public DateTime RegDate { get; set; }
 
         public virtual Genders Gender { get; set; }
         public virtual Groups Group { get; set; }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.change = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
+            this.id_text3 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.id_text2 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -65,7 +65,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +74,7 @@
             this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.regDateDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.group_combo = new System.Windows.Forms.ComboBox();
             this.gender_combo = new System.Windows.Forms.ComboBox();
             this.group_combo2 = new System.Windows.Forms.ComboBox();
@@ -83,40 +83,42 @@
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // change
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(888, 419);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(232, 38);
-            this.button2.TabIndex = 146;
-            this.button2.Text = "Добавить";
-            this.button2.UseVisualStyleBackColor = false;
+            this.change.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.change.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.change.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.change.ForeColor = System.Drawing.Color.Black;
+            this.change.Location = new System.Drawing.Point(888, 419);
+            this.change.Name = "change";
+            this.change.Size = new System.Drawing.Size(232, 38);
+            this.change.TabIndex = 146;
+            this.change.Text = "Изменить";
+            this.change.UseVisualStyleBackColor = false;
+            this.change.Click += new System.EventHandler(this.change_Click);
             // 
-            // button1
+            // delete
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(888, 561);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(232, 38);
-            this.button1.TabIndex = 145;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = false;
+            this.delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.delete.ForeColor = System.Drawing.Color.Black;
+            this.delete.Location = new System.Drawing.Point(888, 561);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(232, 38);
+            this.delete.TabIndex = 145;
+            this.delete.Text = "Удалить";
+            this.delete.UseVisualStyleBackColor = false;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
-            // textBox1
+            // id_text3
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(953, 516);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 144;
+            this.id_text3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.id_text3.Location = new System.Drawing.Point(953, 516);
+            this.id_text3.Name = "id_text3";
+            this.id_text3.ReadOnly = true;
+            this.id_text3.Size = new System.Drawing.Size(100, 26);
+            this.id_text3.TabIndex = 144;
             // 
             // label18
             // 
@@ -287,6 +289,7 @@
             this.add.TabIndex = 124;
             this.add.Text = "Добавить";
             this.add.UseVisualStyleBackColor = false;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // Reg_date_text
             // 
@@ -436,10 +439,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(720, 657);
             this.dataGridView1.TabIndex = 107;
-            // 
-            // studentsBindingSource
-            // 
-            this.studentsBindingSource.DataSource = typeof(LibraryApp.Students);
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -495,6 +495,10 @@
             this.regDateDataGridViewImageColumn.HeaderText = "RegDate";
             this.regDateDataGridViewImageColumn.Name = "regDateDataGridViewImageColumn";
             // 
+            // studentsBindingSource
+            // 
+            this.studentsBindingSource.DataSource = typeof(LibraryApp.Students);
+            // 
             // group_combo
             // 
             this.group_combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -541,9 +545,9 @@
             this.Controls.Add(this.group_combo2);
             this.Controls.Add(this.gender_combo);
             this.Controls.Add(this.group_combo);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.change);
+            this.Controls.Add(this.delete);
+            this.Controls.Add(this.id_text3);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.id_text2);
             this.Controls.Add(this.label17);
@@ -589,9 +593,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button change;
+        private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.TextBox id_text3;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox id_text2;
         private System.Windows.Forms.Label label17;
