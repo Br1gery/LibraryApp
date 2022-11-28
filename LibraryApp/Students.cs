@@ -25,7 +25,21 @@ namespace LibraryApp
         public DateTime RegDate { get; set; }
 
         public virtual Genders Gender { get; set; }
+        public virtual string Gender_name
+        {
+            get
+            {
+                return Gender.Gender;
+            }
+        }
         public virtual Groups Group { get; set; }
+        public virtual string Group_name
+        {
+            get
+            {
+                return Group.Group;
+            }
+        }
         public virtual ICollection<Examples> Examples { get; set; }
     }
 }

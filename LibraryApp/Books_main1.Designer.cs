@@ -60,21 +60,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Author_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Genre_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Publisher_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genre_id_combo = new System.Windows.Forms.ComboBox();
             this.publisher_id_combo = new System.Windows.Forms.ComboBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.author_id_combo2 = new System.Windows.Forms.ComboBox();
             this.genre_id_combo2 = new System.Windows.Forms.ComboBox();
             this.publisher_id_combo2 = new System.Windows.Forms.ComboBox();
-            this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.relYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pagesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Author_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Genre_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Publisher_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -394,6 +394,27 @@
             this.dataGridView1.TabIndex = 72;
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
+            // Author_name
+            // 
+            this.Author_name.DataPropertyName = "Author_name";
+            this.Author_name.HeaderText = "Author_name";
+            this.Author_name.Name = "Author_name";
+            this.Author_name.ReadOnly = true;
+            // 
+            // Genre_name
+            // 
+            this.Genre_name.DataPropertyName = "Genre_name";
+            this.Genre_name.HeaderText = "Genre_name";
+            this.Genre_name.Name = "Genre_name";
+            this.Genre_name.ReadOnly = true;
+            // 
+            // Publisher_name
+            // 
+            this.Publisher_name.DataPropertyName = "Publisher_name";
+            this.Publisher_name.HeaderText = "Publisher_name";
+            this.Publisher_name.Name = "Publisher_name";
+            this.Publisher_name.ReadOnly = true;
+            // 
             // genre_id_combo
             // 
             this.genre_id_combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -446,10 +467,6 @@
             this.publisher_id_combo2.Size = new System.Drawing.Size(100, 28);
             this.publisher_id_combo2.TabIndex = 113;
             // 
-            // booksBindingSource
-            // 
-            this.booksBindingSource.DataSource = typeof(LibraryApp.Books);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -480,26 +497,9 @@
             this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             // 
-            // Author_name
+            // booksBindingSource
             // 
-            this.Author_name.DataPropertyName = "Author_name";
-            this.Author_name.HeaderText = "Author_name";
-            this.Author_name.Name = "Author_name";
-            this.Author_name.ReadOnly = true;
-            // 
-            // Genre_name
-            // 
-            this.Genre_name.DataPropertyName = "Genre_name";
-            this.Genre_name.HeaderText = "Genre_name";
-            this.Genre_name.Name = "Genre_name";
-            this.Genre_name.ReadOnly = true;
-            // 
-            // Publisher_name
-            // 
-            this.Publisher_name.DataPropertyName = "Publisher_name";
-            this.Publisher_name.HeaderText = "Publisher_name";
-            this.Publisher_name.Name = "Publisher_name";
-            this.Publisher_name.ReadOnly = true;
+            this.booksBindingSource.DataSource = typeof(LibraryApp.Books);
             // 
             // Books_main1
             // 
