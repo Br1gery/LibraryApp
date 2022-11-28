@@ -257,9 +257,11 @@
       <DependentUpon>Students_main1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Authors.datasource" />
     <None Include="Properties\DataSources\Books.datasource" />
     <None Include="Properties\DataSources\Examples.datasource" />
     <None Include="Properties\DataSources\Students.datasource" />
+    <None Include="Properties\DataSources\UsersData.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

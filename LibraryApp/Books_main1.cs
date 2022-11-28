@@ -13,9 +13,11 @@ namespace LibraryApp
 {
     public partial class Books_main1 : Form
     {
+        int ID1 = 0;
         public Books_main1()
         {
             InitializeComponent();
+            dataGridView1.RowHeaderMouseClick += new DataGridViewCellMouseEventHandler(dataGridView1_RowHeaderMouseClick);
         }
 
         private void Books_main1_Load(object sender, EventArgs e)
@@ -87,6 +89,7 @@ namespace LibraryApp
             book.PublisherId = Convert.ToInt32(publisher_id_combo2.SelectedValue.ToString());
             DB.DataBase.SaveChanges();
             dataGridView1.Refresh();
+            MessageBox.Show("Книга успешно изменена");
         }
 
         private void delete_Click(object sender, EventArgs e)
@@ -97,6 +100,17 @@ namespace LibraryApp
                 DB.DataBase.Books.Remove(book);
             }
             DB.DataBase.SaveChanges();
+        }
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ID1 = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            Id_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            Name_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            Rel_year_text2.Text= dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            Pages_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            Description_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            id_text3.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
         }
     }
 }

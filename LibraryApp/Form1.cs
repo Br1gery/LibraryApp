@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using BCrypt;
+using Microsoft.EntityFrameworkCore;
 
 namespace LibraryApp
 {
     public partial class Form1 : Form
     {
-        LibraryDBContext db = new LibraryDBContext();
         Thread th;
         Thread th1;
         public Form1()
@@ -29,7 +29,7 @@ namespace LibraryApp
 
         private void Log_in_Click(object sender, EventArgs e)
         {
-            UsersData user = db.UsersData.FirstOrDefault(u => u.Login == Login_log_screen.Text);
+            UsersData user = DB.DataBase.UsersData.FirstOrDefault(u => u.Login == Login_log_screen.Text);
             if (user == null)
             {
                 MessageBox.Show("Пользователь не найден");
@@ -62,6 +62,10 @@ namespace LibraryApp
         public void open1(object obj1)
         {
             Application.Run(new main2());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

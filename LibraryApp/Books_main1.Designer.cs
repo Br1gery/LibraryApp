@@ -60,6 +60,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.genre_id_combo = new System.Windows.Forms.ComboBox();
+            this.publisher_id_combo = new System.Windows.Forms.ComboBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.author_id_combo2 = new System.Windows.Forms.ComboBox();
+            this.genre_id_combo2 = new System.Windows.Forms.ComboBox();
+            this.publisher_id_combo2 = new System.Windows.Forms.ComboBox();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,12 +75,7 @@
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.publisherIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.genre_id_combo = new System.Windows.Forms.ComboBox();
-            this.publisher_id_combo = new System.Windows.Forms.ComboBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.author_id_combo2 = new System.Windows.Forms.ComboBox();
-            this.genre_id_combo2 = new System.Windows.Forms.ComboBox();
-            this.publisher_id_combo2 = new System.Windows.Forms.ComboBox();
+            this.Author_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -386,12 +387,66 @@
             this.pagesDataGridViewTextBoxColumn,
             this.genreIdDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn,
-            this.publisherIdDataGridViewTextBoxColumn});
+            this.publisherIdDataGridViewTextBoxColumn,
+            this.Author_name});
             this.dataGridView1.DataSource = this.booksBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(9, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(717, 657);
             this.dataGridView1.TabIndex = 72;
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
+            // 
+            // genre_id_combo
+            // 
+            this.genre_id_combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.genre_id_combo.FormattingEnabled = true;
+            this.genre_id_combo.Location = new System.Drawing.Point(1156, 53);
+            this.genre_id_combo.Name = "genre_id_combo";
+            this.genre_id_combo.Size = new System.Drawing.Size(100, 28);
+            this.genre_id_combo.TabIndex = 109;
+            // 
+            // publisher_id_combo
+            // 
+            this.publisher_id_combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.publisher_id_combo.FormattingEnabled = true;
+            this.publisher_id_combo.Location = new System.Drawing.Point(1050, 132);
+            this.publisher_id_combo.Name = "publisher_id_combo";
+            this.publisher_id_combo.Size = new System.Drawing.Size(100, 28);
+            this.publisher_id_combo.TabIndex = 110;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Author";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Author";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 674;
+            // 
+            // author_id_combo2
+            // 
+            this.author_id_combo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.author_id_combo2.FormattingEnabled = true;
+            this.author_id_combo2.Location = new System.Drawing.Point(838, 298);
+            this.author_id_combo2.Name = "author_id_combo2";
+            this.author_id_combo2.Size = new System.Drawing.Size(100, 28);
+            this.author_id_combo2.TabIndex = 111;
+            // 
+            // genre_id_combo2
+            // 
+            this.genre_id_combo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.genre_id_combo2.FormattingEnabled = true;
+            this.genre_id_combo2.Location = new System.Drawing.Point(778, 379);
+            this.genre_id_combo2.Name = "genre_id_combo2";
+            this.genre_id_combo2.Size = new System.Drawing.Size(100, 28);
+            this.genre_id_combo2.TabIndex = 112;
+            // 
+            // publisher_id_combo2
+            // 
+            this.publisher_id_combo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.publisher_id_combo2.FormattingEnabled = true;
+            this.publisher_id_combo2.Location = new System.Drawing.Point(1127, 379);
+            this.publisher_id_combo2.Name = "publisher_id_combo2";
+            this.publisher_id_combo2.Size = new System.Drawing.Size(100, 28);
+            this.publisher_id_combo2.TabIndex = 113;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -445,57 +500,12 @@
             // 
             this.booksBindingSource.DataSource = typeof(LibraryApp.Books);
             // 
-            // genre_id_combo
+            // Author_name
             // 
-            this.genre_id_combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.genre_id_combo.FormattingEnabled = true;
-            this.genre_id_combo.Location = new System.Drawing.Point(1156, 53);
-            this.genre_id_combo.Name = "genre_id_combo";
-            this.genre_id_combo.Size = new System.Drawing.Size(100, 28);
-            this.genre_id_combo.TabIndex = 109;
-            // 
-            // publisher_id_combo
-            // 
-            this.publisher_id_combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.publisher_id_combo.FormattingEnabled = true;
-            this.publisher_id_combo.Location = new System.Drawing.Point(1050, 132);
-            this.publisher_id_combo.Name = "publisher_id_combo";
-            this.publisher_id_combo.Size = new System.Drawing.Size(100, 28);
-            this.publisher_id_combo.TabIndex = 110;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Author";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Author";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 674;
-            // 
-            // author_id_combo2
-            // 
-            this.author_id_combo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.author_id_combo2.FormattingEnabled = true;
-            this.author_id_combo2.Location = new System.Drawing.Point(838, 298);
-            this.author_id_combo2.Name = "author_id_combo2";
-            this.author_id_combo2.Size = new System.Drawing.Size(100, 28);
-            this.author_id_combo2.TabIndex = 111;
-            // 
-            // genre_id_combo2
-            // 
-            this.genre_id_combo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.genre_id_combo2.FormattingEnabled = true;
-            this.genre_id_combo2.Location = new System.Drawing.Point(778, 379);
-            this.genre_id_combo2.Name = "genre_id_combo2";
-            this.genre_id_combo2.Size = new System.Drawing.Size(100, 28);
-            this.genre_id_combo2.TabIndex = 112;
-            // 
-            // publisher_id_combo2
-            // 
-            this.publisher_id_combo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.publisher_id_combo2.FormattingEnabled = true;
-            this.publisher_id_combo2.Location = new System.Drawing.Point(1127, 379);
-            this.publisher_id_combo2.Name = "publisher_id_combo2";
-            this.publisher_id_combo2.Size = new System.Drawing.Size(100, 28);
-            this.publisher_id_combo2.TabIndex = 113;
+            this.Author_name.DataPropertyName = "Author_name";
+            this.Author_name.HeaderText = "Author_name";
+            this.Author_name.Name = "Author_name";
+            this.Author_name.ReadOnly = true;
             // 
             // Books_main1
             // 
@@ -597,5 +607,6 @@
         private System.Windows.Forms.ComboBox author_id_combo2;
         private System.Windows.Forms.ComboBox genre_id_combo2;
         private System.Windows.Forms.ComboBox publisher_id_combo2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Author_name;
     }
 }

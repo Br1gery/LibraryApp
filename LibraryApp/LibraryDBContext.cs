@@ -34,7 +34,7 @@ namespace LibraryApp
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlite("Data Source=LibraryDB.sqlite");
+                optionsBuilder.UseSqlite("Data Source=../../LibraryDB.sqlite");
             }
         }
 
