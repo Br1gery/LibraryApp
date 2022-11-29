@@ -61,9 +61,9 @@ namespace LibraryApp
         {
             ID1 = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             Shelf_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            Issue_date_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            Experation_date_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            Delivery_date_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            Issue_date_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString().Split(' ')[0];
+            Experation_date_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString().Split(' ')[0];
+            Delivery_date_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString().Split(' ')[0];
             id_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             id_text3.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
         }
