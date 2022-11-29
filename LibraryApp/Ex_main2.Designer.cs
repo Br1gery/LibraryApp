@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ownderIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shelfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.issueDateDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.expDateDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.deliveryDateDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.examplesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shelfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Book_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Location_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Owner_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IssueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExpDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeliveryDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.examplesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -50,18 +50,22 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.locationIdDataGridViewTextBoxColumn,
-            this.ownderIdDataGridViewTextBoxColumn,
-            this.bookIdDataGridViewTextBoxColumn,
             this.shelfDataGridViewTextBoxColumn,
-            this.issueDateDataGridViewImageColumn,
-            this.expDateDataGridViewImageColumn,
-            this.deliveryDateDataGridViewImageColumn});
+            this.Book_name,
+            this.Location_name,
+            this.Owner_name,
+            this.IssueDate,
+            this.ExpDate,
+            this.DeliveryDate});
             this.dataGridView1.DataSource = this.examplesBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1240, 657);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // examplesBindingSource
+            // 
+            this.examplesBindingSource.DataSource = typeof(LibraryApp.Examples);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -69,51 +73,50 @@
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             // 
-            // locationIdDataGridViewTextBoxColumn
-            // 
-            this.locationIdDataGridViewTextBoxColumn.DataPropertyName = "LocationId";
-            this.locationIdDataGridViewTextBoxColumn.HeaderText = "LocationId";
-            this.locationIdDataGridViewTextBoxColumn.Name = "locationIdDataGridViewTextBoxColumn";
-            // 
-            // ownderIdDataGridViewTextBoxColumn
-            // 
-            this.ownderIdDataGridViewTextBoxColumn.DataPropertyName = "OwnderId";
-            this.ownderIdDataGridViewTextBoxColumn.HeaderText = "OwnderId";
-            this.ownderIdDataGridViewTextBoxColumn.Name = "ownderIdDataGridViewTextBoxColumn";
-            // 
-            // bookIdDataGridViewTextBoxColumn
-            // 
-            this.bookIdDataGridViewTextBoxColumn.DataPropertyName = "BookId";
-            this.bookIdDataGridViewTextBoxColumn.HeaderText = "BookId";
-            this.bookIdDataGridViewTextBoxColumn.Name = "bookIdDataGridViewTextBoxColumn";
-            // 
             // shelfDataGridViewTextBoxColumn
             // 
             this.shelfDataGridViewTextBoxColumn.DataPropertyName = "Shelf";
-            this.shelfDataGridViewTextBoxColumn.HeaderText = "Shelf";
+            this.shelfDataGridViewTextBoxColumn.HeaderText = "Полка";
             this.shelfDataGridViewTextBoxColumn.Name = "shelfDataGridViewTextBoxColumn";
             // 
-            // issueDateDataGridViewImageColumn
+            // Book_name
             // 
-            this.issueDateDataGridViewImageColumn.DataPropertyName = "IssueDate";
-            this.issueDateDataGridViewImageColumn.HeaderText = "IssueDate";
-            this.issueDateDataGridViewImageColumn.Name = "issueDateDataGridViewImageColumn";
+            this.Book_name.DataPropertyName = "Book_name";
+            this.Book_name.HeaderText = "Книга";
+            this.Book_name.Name = "Book_name";
+            this.Book_name.ReadOnly = true;
             // 
-            // expDateDataGridViewImageColumn
+            // Location_name
             // 
-            this.expDateDataGridViewImageColumn.DataPropertyName = "ExpDate";
-            this.expDateDataGridViewImageColumn.HeaderText = "ExpDate";
-            this.expDateDataGridViewImageColumn.Name = "expDateDataGridViewImageColumn";
+            this.Location_name.DataPropertyName = "Location_name";
+            this.Location_name.HeaderText = "Место";
+            this.Location_name.Name = "Location_name";
+            this.Location_name.ReadOnly = true;
             // 
-            // deliveryDateDataGridViewImageColumn
+            // Owner_name
             // 
-            this.deliveryDateDataGridViewImageColumn.DataPropertyName = "DeliveryDate";
-            this.deliveryDateDataGridViewImageColumn.HeaderText = "DeliveryDate";
-            this.deliveryDateDataGridViewImageColumn.Name = "deliveryDateDataGridViewImageColumn";
+            this.Owner_name.DataPropertyName = "Owner_name";
+            this.Owner_name.HeaderText = "Владелец";
+            this.Owner_name.Name = "Owner_name";
+            this.Owner_name.ReadOnly = true;
             // 
-            // examplesBindingSource
+            // IssueDate
             // 
-            this.examplesBindingSource.DataSource = typeof(LibraryApp.Examples);
+            this.IssueDate.DataPropertyName = "IssueDate";
+            this.IssueDate.HeaderText = "Срок(начало)";
+            this.IssueDate.Name = "IssueDate";
+            // 
+            // ExpDate
+            // 
+            this.ExpDate.DataPropertyName = "ExpDate";
+            this.ExpDate.HeaderText = "Срок(до)";
+            this.ExpDate.Name = "ExpDate";
+            // 
+            // DeliveryDate
+            // 
+            this.DeliveryDate.DataPropertyName = "DeliveryDate";
+            this.DeliveryDate.HeaderText = "Дата получения";
+            this.DeliveryDate.Name = "DeliveryDate";
             // 
             // Ex_main2
             // 
@@ -134,14 +137,14 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn locationIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ownderIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shelfDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn issueDateDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewImageColumn expDateDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewImageColumn deliveryDateDataGridViewImageColumn;
         private System.Windows.Forms.BindingSource examplesBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shelfDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Book_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Location_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Owner_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IssueDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ExpDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryDate;
     }
 }

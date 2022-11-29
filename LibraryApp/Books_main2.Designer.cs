@@ -68,45 +68,45 @@
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Название";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             // 
             // relYearDataGridViewTextBoxColumn
             // 
             this.relYearDataGridViewTextBoxColumn.DataPropertyName = "RelYear";
-            this.relYearDataGridViewTextBoxColumn.HeaderText = "RelYear";
+            this.relYearDataGridViewTextBoxColumn.HeaderText = "Год издания";
             this.relYearDataGridViewTextBoxColumn.Name = "relYearDataGridViewTextBoxColumn";
             // 
             // pagesDataGridViewTextBoxColumn
             // 
             this.pagesDataGridViewTextBoxColumn.DataPropertyName = "Pages";
-            this.pagesDataGridViewTextBoxColumn.HeaderText = "Pages";
+            this.pagesDataGridViewTextBoxColumn.HeaderText = "Страницы";
             this.pagesDataGridViewTextBoxColumn.Name = "pagesDataGridViewTextBoxColumn";
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
             this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Описание";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             // 
             // Author_name
             // 
             this.Author_name.DataPropertyName = "Author_name";
-            this.Author_name.HeaderText = "Author_name";
+            this.Author_name.HeaderText = "Автор";
             this.Author_name.Name = "Author_name";
             this.Author_name.ReadOnly = true;
             // 
             // Genre_name
             // 
             this.Genre_name.DataPropertyName = "Genre_name";
-            this.Genre_name.HeaderText = "Genre_name";
+            this.Genre_name.HeaderText = "Жанр";
             this.Genre_name.Name = "Genre_name";
             this.Genre_name.ReadOnly = true;
             // 
             // Publisher_name
             // 
             this.Publisher_name.DataPropertyName = "Publisher_name";
-            this.Publisher_name.HeaderText = "Publisher_name";
+            this.Publisher_name.HeaderText = "Издатель";
             this.Publisher_name.Name = "Publisher_name";
             this.Publisher_name.ReadOnly = true;
             // 

@@ -41,9 +41,9 @@
             this.Change = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.genresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genresBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -179,6 +179,10 @@
             this.dataGridView1.TabIndex = 110;
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
+            // genresBindingSource
+            // 
+            this.genresBindingSource.DataSource = typeof(LibraryApp.Genres);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -188,12 +192,8 @@
             // genreDataGridViewTextBoxColumn
             // 
             this.genreDataGridViewTextBoxColumn.DataPropertyName = "Genre";
-            this.genreDataGridViewTextBoxColumn.HeaderText = "Genre";
+            this.genreDataGridViewTextBoxColumn.HeaderText = "Жанр";
             this.genreDataGridViewTextBoxColumn.Name = "genreDataGridViewTextBoxColumn";
-            // 
-            // genresBindingSource
-            // 
-            this.genresBindingSource.DataSource = typeof(LibraryApp.Genres);
             // 
             // Genres_main1
             // 
@@ -237,8 +237,8 @@
         private System.Windows.Forms.Button Change;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource genresBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn genreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource genresBindingSource;
     }
 }

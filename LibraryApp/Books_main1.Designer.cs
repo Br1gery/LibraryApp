@@ -60,9 +60,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Author_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Genre_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Publisher_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.genre_id_combo = new System.Windows.Forms.ComboBox();
             this.publisher_id_combo = new System.Windows.Forms.ComboBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,7 +72,9 @@
             this.relYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pagesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Author_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Genre_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Publisher_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -394,26 +394,9 @@
             this.dataGridView1.TabIndex = 72;
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
-            // Author_name
+            // booksBindingSource
             // 
-            this.Author_name.DataPropertyName = "Author_name";
-            this.Author_name.HeaderText = "Author_name";
-            this.Author_name.Name = "Author_name";
-            this.Author_name.ReadOnly = true;
-            // 
-            // Genre_name
-            // 
-            this.Genre_name.DataPropertyName = "Genre_name";
-            this.Genre_name.HeaderText = "Genre_name";
-            this.Genre_name.Name = "Genre_name";
-            this.Genre_name.ReadOnly = true;
-            // 
-            // Publisher_name
-            // 
-            this.Publisher_name.DataPropertyName = "Publisher_name";
-            this.Publisher_name.HeaderText = "Publisher_name";
-            this.Publisher_name.Name = "Publisher_name";
-            this.Publisher_name.ReadOnly = true;
+            this.booksBindingSource.DataSource = typeof(LibraryApp.Books);
             // 
             // genre_id_combo
             // 
@@ -476,30 +459,47 @@
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Название";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             // 
             // relYearDataGridViewTextBoxColumn
             // 
             this.relYearDataGridViewTextBoxColumn.DataPropertyName = "RelYear";
-            this.relYearDataGridViewTextBoxColumn.HeaderText = "RelYear";
+            this.relYearDataGridViewTextBoxColumn.HeaderText = "Дата Издания";
             this.relYearDataGridViewTextBoxColumn.Name = "relYearDataGridViewTextBoxColumn";
             // 
             // pagesDataGridViewTextBoxColumn
             // 
             this.pagesDataGridViewTextBoxColumn.DataPropertyName = "Pages";
-            this.pagesDataGridViewTextBoxColumn.HeaderText = "Pages";
+            this.pagesDataGridViewTextBoxColumn.HeaderText = "Страницы";
             this.pagesDataGridViewTextBoxColumn.Name = "pagesDataGridViewTextBoxColumn";
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
             this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Описание";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             // 
-            // booksBindingSource
+            // Author_name
             // 
-            this.booksBindingSource.DataSource = typeof(LibraryApp.Books);
+            this.Author_name.DataPropertyName = "Author_name";
+            this.Author_name.HeaderText = "Автор";
+            this.Author_name.Name = "Author_name";
+            this.Author_name.ReadOnly = true;
+            // 
+            // Genre_name
+            // 
+            this.Genre_name.DataPropertyName = "Genre_name";
+            this.Genre_name.HeaderText = "Жанр";
+            this.Genre_name.Name = "Genre_name";
+            this.Genre_name.ReadOnly = true;
+            // 
+            // Publisher_name
+            // 
+            this.Publisher_name.DataPropertyName = "Publisher_name";
+            this.Publisher_name.HeaderText = "Издатель";
+            this.Publisher_name.Name = "Publisher_name";
+            this.Publisher_name.ReadOnly = true;
             // 
             // Books_main1
             // 
