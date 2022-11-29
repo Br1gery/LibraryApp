@@ -59,21 +59,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.examplesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ownderIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shelfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.issueDateDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.expDateDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.deliveryDateDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.loc_combo = new System.Windows.Forms.ComboBox();
             this.book_combo = new System.Windows.Forms.ComboBox();
             this.loc__combo2 = new System.Windows.Forms.ComboBox();
             this.book_combo2 = new System.Windows.Forms.ComboBox();
-            this.owner_text = new System.Windows.Forms.TextBox();
-            this.owner_text2 = new System.Windows.Forms.TextBox();
+            this.Owner_combo1 = new System.Windows.Forms.ComboBox();
+            this.Owner_combo2 = new System.Windows.Forms.ComboBox();
+            this.examplesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shelfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IssueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExpDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeliveryDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Book_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Location_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Owner_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.examplesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +90,7 @@
             this.delete.TabIndex = 71;
             this.delete.Text = "Удалить";
             this.delete.UseVisualStyleBackColor = false;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // id_text3
             // 
@@ -112,6 +113,7 @@
             this.change_ex.TabIndex = 69;
             this.change_ex.Text = "Изменить";
             this.change_ex.UseVisualStyleBackColor = false;
+            this.change_ex.Click += new System.EventHandler(this.change_ex_Click);
             // 
             // Issue_date_text2
             // 
@@ -166,6 +168,7 @@
             this.add.TabIndex = 60;
             this.add.Text = "Добавить";
             this.add.UseVisualStyleBackColor = false;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // Delivery_date_text
             // 
@@ -255,9 +258,9 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label11.Location = new System.Drawing.Point(1173, 254);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 24);
+            this.label11.Size = new System.Drawing.Size(63, 24);
             this.label11.TabIndex = 47;
-            this.label11.Text = "Shelf";
+            this.label11.Text = "Полка";
             // 
             // label12
             // 
@@ -366,70 +369,19 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.locationIdDataGridViewTextBoxColumn,
-            this.ownderIdDataGridViewTextBoxColumn,
-            this.bookIdDataGridViewTextBoxColumn,
             this.shelfDataGridViewTextBoxColumn,
-            this.issueDateDataGridViewImageColumn,
-            this.expDateDataGridViewImageColumn,
-            this.deliveryDateDataGridViewImageColumn});
+            this.IssueDate,
+            this.ExpDate,
+            this.DeliveryDate,
+            this.Book_name,
+            this.Location_name,
+            this.Owner_name});
             this.dataGridView1.DataSource = this.examplesBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(10, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(720, 657);
             this.dataGridView1.TabIndex = 36;
-            // 
-            // examplesBindingSource
-            // 
-            this.examplesBindingSource.DataSource = typeof(LibraryApp.Examples);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // locationIdDataGridViewTextBoxColumn
-            // 
-            this.locationIdDataGridViewTextBoxColumn.DataPropertyName = "LocationId";
-            this.locationIdDataGridViewTextBoxColumn.HeaderText = "LocationId";
-            this.locationIdDataGridViewTextBoxColumn.Name = "locationIdDataGridViewTextBoxColumn";
-            // 
-            // ownderIdDataGridViewTextBoxColumn
-            // 
-            this.ownderIdDataGridViewTextBoxColumn.DataPropertyName = "OwnderId";
-            this.ownderIdDataGridViewTextBoxColumn.HeaderText = "OwnderId";
-            this.ownderIdDataGridViewTextBoxColumn.Name = "ownderIdDataGridViewTextBoxColumn";
-            // 
-            // bookIdDataGridViewTextBoxColumn
-            // 
-            this.bookIdDataGridViewTextBoxColumn.DataPropertyName = "BookId";
-            this.bookIdDataGridViewTextBoxColumn.HeaderText = "BookId";
-            this.bookIdDataGridViewTextBoxColumn.Name = "bookIdDataGridViewTextBoxColumn";
-            // 
-            // shelfDataGridViewTextBoxColumn
-            // 
-            this.shelfDataGridViewTextBoxColumn.DataPropertyName = "Shelf";
-            this.shelfDataGridViewTextBoxColumn.HeaderText = "Shelf";
-            this.shelfDataGridViewTextBoxColumn.Name = "shelfDataGridViewTextBoxColumn";
-            // 
-            // issueDateDataGridViewImageColumn
-            // 
-            this.issueDateDataGridViewImageColumn.DataPropertyName = "IssueDate";
-            this.issueDateDataGridViewImageColumn.HeaderText = "IssueDate";
-            this.issueDateDataGridViewImageColumn.Name = "issueDateDataGridViewImageColumn";
-            // 
-            // expDateDataGridViewImageColumn
-            // 
-            this.expDateDataGridViewImageColumn.DataPropertyName = "ExpDate";
-            this.expDateDataGridViewImageColumn.HeaderText = "ExpDate";
-            this.expDateDataGridViewImageColumn.Name = "expDateDataGridViewImageColumn";
-            // 
-            // deliveryDateDataGridViewImageColumn
-            // 
-            this.deliveryDateDataGridViewImageColumn.DataPropertyName = "DeliveryDate";
-            this.deliveryDateDataGridViewImageColumn.HeaderText = "DeliveryDate";
-            this.deliveryDateDataGridViewImageColumn.Name = "deliveryDateDataGridViewImageColumn";
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // loc_combo
             // 
@@ -467,21 +419,78 @@
             this.book_combo2.Size = new System.Drawing.Size(100, 28);
             this.book_combo2.TabIndex = 154;
             // 
-            // owner_text
+            // Owner_combo1
             // 
-            this.owner_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.owner_text.Location = new System.Drawing.Point(837, 55);
-            this.owner_text.Name = "owner_text";
-            this.owner_text.Size = new System.Drawing.Size(100, 26);
-            this.owner_text.TabIndex = 155;
+            this.Owner_combo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Owner_combo1.FormattingEnabled = true;
+            this.Owner_combo1.Location = new System.Drawing.Point(835, 53);
+            this.Owner_combo1.Name = "Owner_combo1";
+            this.Owner_combo1.Size = new System.Drawing.Size(100, 28);
+            this.Owner_combo1.TabIndex = 157;
             // 
-            // owner_text2
+            // Owner_combo2
             // 
-            this.owner_text2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.owner_text2.Location = new System.Drawing.Point(946, 300);
-            this.owner_text2.Name = "owner_text2";
-            this.owner_text2.Size = new System.Drawing.Size(100, 26);
-            this.owner_text2.TabIndex = 156;
+            this.Owner_combo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Owner_combo2.FormattingEnabled = true;
+            this.Owner_combo2.Location = new System.Drawing.Point(943, 298);
+            this.Owner_combo2.Name = "Owner_combo2";
+            this.Owner_combo2.Size = new System.Drawing.Size(100, 28);
+            this.Owner_combo2.TabIndex = 158;
+            // 
+            // examplesBindingSource
+            // 
+            this.examplesBindingSource.DataSource = typeof(LibraryApp.Examples);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // shelfDataGridViewTextBoxColumn
+            // 
+            this.shelfDataGridViewTextBoxColumn.DataPropertyName = "Shelf";
+            this.shelfDataGridViewTextBoxColumn.HeaderText = "Shelf";
+            this.shelfDataGridViewTextBoxColumn.Name = "shelfDataGridViewTextBoxColumn";
+            // 
+            // IssueDate
+            // 
+            this.IssueDate.DataPropertyName = "IssueDate";
+            this.IssueDate.HeaderText = "IssueDate";
+            this.IssueDate.Name = "IssueDate";
+            // 
+            // ExpDate
+            // 
+            this.ExpDate.DataPropertyName = "ExpDate";
+            this.ExpDate.HeaderText = "ExpDate";
+            this.ExpDate.Name = "ExpDate";
+            // 
+            // DeliveryDate
+            // 
+            this.DeliveryDate.DataPropertyName = "DeliveryDate";
+            this.DeliveryDate.HeaderText = "DeliveryDate";
+            this.DeliveryDate.Name = "DeliveryDate";
+            // 
+            // Book_name
+            // 
+            this.Book_name.DataPropertyName = "Book_name";
+            this.Book_name.HeaderText = "Book_name";
+            this.Book_name.Name = "Book_name";
+            this.Book_name.ReadOnly = true;
+            // 
+            // Location_name
+            // 
+            this.Location_name.DataPropertyName = "Location_name";
+            this.Location_name.HeaderText = "Location_name";
+            this.Location_name.Name = "Location_name";
+            this.Location_name.ReadOnly = true;
+            // 
+            // Owner_name
+            // 
+            this.Owner_name.DataPropertyName = "Owner_name";
+            this.Owner_name.HeaderText = "Owner_name";
+            this.Owner_name.Name = "Owner_name";
+            this.Owner_name.ReadOnly = true;
             // 
             // Ex_main1
             // 
@@ -489,8 +498,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.owner_text2);
-            this.Controls.Add(this.owner_text);
+            this.Controls.Add(this.Owner_combo2);
+            this.Controls.Add(this.Owner_combo1);
             this.Controls.Add(this.book_combo2);
             this.Controls.Add(this.loc__combo2);
             this.Controls.Add(this.book_combo);
@@ -567,20 +576,20 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn locationIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ownderIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shelfDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn issueDateDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewImageColumn expDateDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewImageColumn deliveryDateDataGridViewImageColumn;
         private System.Windows.Forms.BindingSource examplesBindingSource;
         private System.Windows.Forms.ComboBox loc_combo;
         private System.Windows.Forms.ComboBox book_combo;
         private System.Windows.Forms.ComboBox loc__combo2;
         private System.Windows.Forms.ComboBox book_combo2;
-        private System.Windows.Forms.TextBox owner_text;
-        private System.Windows.Forms.TextBox owner_text2;
+        private System.Windows.Forms.ComboBox Owner_combo1;
+        private System.Windows.Forms.ComboBox Owner_combo2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shelfDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IssueDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ExpDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Book_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Location_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Owner_name;
     }
 }

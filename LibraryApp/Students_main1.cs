@@ -71,7 +71,7 @@ namespace LibraryApp
             Lastname_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             Address_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             Date_of_birth_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            Reg_date_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+            Reg_date_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
             id_text3.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             id_text2.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
         }
