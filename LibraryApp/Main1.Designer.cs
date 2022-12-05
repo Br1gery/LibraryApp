@@ -35,6 +35,7 @@
             this.authors_main1 = new System.Windows.Forms.Button();
             this.publishers_main1 = new System.Windows.Forms.Button();
             this.genres_main1 = new System.Windows.Forms.Button();
+            this.change_pass = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // exit_main1
@@ -135,12 +136,27 @@
             this.genres_main1.UseVisualStyleBackColor = false;
             this.genres_main1.Click += new System.EventHandler(this.genres_main1_Click);
             // 
+            // change_pass
+            // 
+            this.change_pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.change_pass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.change_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.change_pass.ForeColor = System.Drawing.Color.Black;
+            this.change_pass.Location = new System.Drawing.Point(869, 637);
+            this.change_pass.Name = "change_pass";
+            this.change_pass.Size = new System.Drawing.Size(185, 33);
+            this.change_pass.TabIndex = 17;
+            this.change_pass.Text = "Сменить пароль";
+            this.change_pass.UseVisualStyleBackColor = false;
+            this.change_pass.Click += new System.EventHandler(this.change_pass_Click);
+            // 
             // Main1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.change_pass);
             this.Controls.Add(this.authors_main1);
             this.Controls.Add(this.publishers_main1);
             this.Controls.Add(this.genres_main1);
@@ -150,6 +166,7 @@
             this.Controls.Add(this.books_main1);
             this.Name = "Main1";
             this.Text = "///";
+            this.Load += new System.EventHandler(this.Main1_Load);
             this.ResumeLayout(false);
 
         }
@@ -163,5 +180,6 @@
         private System.Windows.Forms.Button authors_main1;
         private System.Windows.Forms.Button publishers_main1;
         private System.Windows.Forms.Button genres_main1;
+        private System.Windows.Forms.Button change_pass;
     }
 }

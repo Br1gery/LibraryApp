@@ -67,5 +67,16 @@ namespace LibraryApp
             Publishers_main1 publishers_Main1 = new Publishers_main1();
             publishers_Main1.Show();
         }
+
+        private void Main1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void change_pass_Click(object sender, EventArgs e)
+        {
+            Pass_change pass_change = new Pass_change();
+            pass_change.Show();
+        }
     }
 }
