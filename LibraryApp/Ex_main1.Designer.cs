@@ -59,7 +59,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.examplesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.IssueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExpDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeliveryDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Book_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Location_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Owner_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loc_combo = new System.Windows.Forms.ComboBox();
             this.book_combo = new System.Windows.Forms.ComboBox();
             this.loc__combo2 = new System.Windows.Forms.ComboBox();
@@ -68,12 +73,7 @@
             this.Owner_combo2 = new System.Windows.Forms.ComboBox();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.shelfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IssueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExpDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeliveryDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Book_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Location_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Owner_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.examplesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.examplesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -383,9 +383,44 @@
             this.dataGridView1.TabIndex = 36;
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
-            // examplesBindingSource
+            // IssueDate
             // 
-            this.examplesBindingSource.DataSource = typeof(LibraryApp.Examples);
+            this.IssueDate.DataPropertyName = "IssueDate";
+            this.IssueDate.HeaderText = "Срок(начало)";
+            this.IssueDate.Name = "IssueDate";
+            // 
+            // ExpDate
+            // 
+            this.ExpDate.DataPropertyName = "ExpDate";
+            this.ExpDate.HeaderText = "Срок(до)";
+            this.ExpDate.Name = "ExpDate";
+            // 
+            // DeliveryDate
+            // 
+            this.DeliveryDate.DataPropertyName = "DeliveryDate";
+            this.DeliveryDate.HeaderText = "Дата получения";
+            this.DeliveryDate.Name = "DeliveryDate";
+            // 
+            // Book_name
+            // 
+            this.Book_name.DataPropertyName = "Book_name";
+            this.Book_name.HeaderText = "Книга";
+            this.Book_name.Name = "Book_name";
+            this.Book_name.ReadOnly = true;
+            // 
+            // Location_name
+            // 
+            this.Location_name.DataPropertyName = "Location_name";
+            this.Location_name.HeaderText = "Место";
+            this.Location_name.Name = "Location_name";
+            this.Location_name.ReadOnly = true;
+            // 
+            // Owner_name
+            // 
+            this.Owner_name.DataPropertyName = "Owner_name";
+            this.Owner_name.HeaderText = "Владелец";
+            this.Owner_name.Name = "Owner_name";
+            this.Owner_name.ReadOnly = true;
             // 
             // loc_combo
             // 
@@ -453,44 +488,9 @@
             this.shelfDataGridViewTextBoxColumn.HeaderText = "Полка";
             this.shelfDataGridViewTextBoxColumn.Name = "shelfDataGridViewTextBoxColumn";
             // 
-            // IssueDate
+            // examplesBindingSource
             // 
-            this.IssueDate.DataPropertyName = "IssueDate";
-            this.IssueDate.HeaderText = "Срок(начало)";
-            this.IssueDate.Name = "IssueDate";
-            // 
-            // ExpDate
-            // 
-            this.ExpDate.DataPropertyName = "ExpDate";
-            this.ExpDate.HeaderText = "Срок(до)";
-            this.ExpDate.Name = "ExpDate";
-            // 
-            // DeliveryDate
-            // 
-            this.DeliveryDate.DataPropertyName = "DeliveryDate";
-            this.DeliveryDate.HeaderText = "Дата получения";
-            this.DeliveryDate.Name = "DeliveryDate";
-            // 
-            // Book_name
-            // 
-            this.Book_name.DataPropertyName = "Book_name";
-            this.Book_name.HeaderText = "Книга";
-            this.Book_name.Name = "Book_name";
-            this.Book_name.ReadOnly = true;
-            // 
-            // Location_name
-            // 
-            this.Location_name.DataPropertyName = "Location_name";
-            this.Location_name.HeaderText = "Место";
-            this.Location_name.Name = "Location_name";
-            this.Location_name.ReadOnly = true;
-            // 
-            // Owner_name
-            // 
-            this.Owner_name.DataPropertyName = "Owner_name";
-            this.Owner_name.HeaderText = "Владелец";
-            this.Owner_name.Name = "Owner_name";
-            this.Owner_name.ReadOnly = true;
+            this.examplesBindingSource.DataSource = typeof(LibraryApp.Examples);
             // 
             // Ex_main1
             // 

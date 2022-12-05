@@ -21,6 +21,9 @@ namespace LibraryApp
         private void Ex_main2_Load(object sender, EventArgs e)
         {
             DB.DataBase.Examples.Load();
+            DB.DataBase.Examples.Include(t => t.Location).Load();
+            DB.DataBase.Examples.Include(t => t.Book).Load();
+            DB.DataBase.Examples.Include(t => t.Ownder).Load();
             dataGridView1.DataSource = DB.DataBase.Examples.Local.ToBindingList();
         }
     }

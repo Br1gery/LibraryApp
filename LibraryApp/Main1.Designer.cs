@@ -149,7 +149,7 @@
             this.Controls.Add(this.Students_button);
             this.Controls.Add(this.books_main1);
             this.Name = "Main1";
-            this.Text = "Main1";
+            this.Text = "///";
             this.ResumeLayout(false);
 
         }
