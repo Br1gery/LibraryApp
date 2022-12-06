@@ -205,7 +205,7 @@ namespace LibraryApp
 
                 entity.Property(e => e.Id)
                     .HasColumnName("id")
-                    .ValueGeneratedNever();
+                    .ValueGeneratedOnAdd();
 
                 entity.Property(e => e.Login).HasColumnType("VARCHAR (255)");
 

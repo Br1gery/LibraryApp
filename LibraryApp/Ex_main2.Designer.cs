@@ -35,8 +35,6 @@
             this.shelfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Book_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Location_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IssueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExpDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeliveryDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Owner_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -53,8 +51,6 @@
             this.shelfDataGridViewTextBoxColumn,
             this.Book_name,
             this.Location_name,
-            this.IssueDate,
-            this.ExpDate,
             this.DeliveryDate,
             this.Owner_name});
             this.dataGridView1.DataSource = this.examplesBindingSource;
@@ -93,18 +89,6 @@
             this.Location_name.Name = "Location_name";
             this.Location_name.ReadOnly = true;
             // 
-            // IssueDate
-            // 
-            this.IssueDate.DataPropertyName = "IssueDate";
-            this.IssueDate.HeaderText = "Срок(начало)";
-            this.IssueDate.Name = "IssueDate";
-            // 
-            // ExpDate
-            // 
-            this.ExpDate.DataPropertyName = "ExpDate";
-            this.ExpDate.HeaderText = "Срок(до)";
-            this.ExpDate.Name = "ExpDate";
-            // 
             // DeliveryDate
             // 
             this.DeliveryDate.DataPropertyName = "DeliveryDate";
@@ -141,8 +125,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn shelfDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Book_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Location_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IssueDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ExpDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Owner_name;
     }

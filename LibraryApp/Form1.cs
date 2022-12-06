@@ -17,6 +17,7 @@ namespace LibraryApp
     {
         Thread th;
         Thread th1;
+        Thread th2;
         public Form1()
         {
             InitializeComponent();
@@ -51,6 +52,13 @@ namespace LibraryApp
                     th1.SetApartmentState(ApartmentState.STA);
                     th1.Start();
                 }
+                if (user.Role == 3)
+                {
+                    this.Close();
+                    th2 = new Thread(open2);
+                    th2.SetApartmentState(ApartmentState.STA);
+                    th2.Start();
+                }
                 MessageBox.Show("Пользователь не найден");
             }
             MessageBox.Show("Неверный пароль");
@@ -62,6 +70,10 @@ namespace LibraryApp
         public void open1(object obj1)
         {
             Application.Run(new main2());
+        }
+        public void open2(object obj2)
+        {
+            Application.Run(new main3());
         }
 
         private void button1_Click(object sender, EventArgs e)

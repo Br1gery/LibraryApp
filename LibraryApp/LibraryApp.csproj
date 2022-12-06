@@ -224,6 +224,12 @@
     <Compile Include="main2.Designer.cs">
       <DependentUpon>main2.cs</DependentUpon>
     </Compile>
+    <Compile Include="main3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main3.Designer.cs">
+      <DependentUpon>main3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pass change.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="main2.resx">
       <DependentUpon>main2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main3.resx">
+      <DependentUpon>main3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pass change.resx">
       <DependentUpon>Pass change.cs</DependentUpon>
